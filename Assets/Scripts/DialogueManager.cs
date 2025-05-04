@@ -11,21 +11,22 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
 
-    private Queue<DialogueLine> lines;
+    private Queue<DialogueLine> lines ;
     
     public bool isDialogueActive = false;
     public float typingSpeed = 0.2f;
     public Animator animator;
-    void Start()
+    void Awake()
     {
         if (Instance == null)
             Instance = this;
+        lines = new Queue<DialogueLine>();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         isDialogueActive = true;
-        animator.Play("show");
+        animator.SetTrigger("show");
         lines.Clear();
 
         foreach (DialogueLine dialogueLine in dialogue.lines)
@@ -40,12 +41,31 @@ public class DialogueManager : MonoBehaviour
     {
         if (lines.Count == 0)
         {
-            
+            EndDialogue();
             return;
         }
         DialogueLine curentLine = lines.Dequeue();
 
         characterIcon.sprite = curentLine.character.icon;
+        characterName.text = curentLine.character.name;
         
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(curentLine));
+    }
+
+    IEnumerator TypeSentence(DialogueLine dialogueLine)
+    {
+        dialogueArea.text = "";
+        foreach (char letter in dialogueLine.line.ToCharArray())
+        {
+            dialogueArea.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+    }
+
+    void EndDialogue()
+    {
+        isDialogueActive = false;
+        animator.SetTrigger("hide");
     }
 }

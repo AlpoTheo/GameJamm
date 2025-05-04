@@ -22,8 +22,17 @@ public class Dialogue
 {
     public List<DialogueLine> lines = new List<DialogueLine>();
 }
+
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-   
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && !DialogueManager.Instance.isDialogueActive)
+        {
+            DialogueManager.Instance.StartDialogue(dialogue);
+        }
+    }
 }

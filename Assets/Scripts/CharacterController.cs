@@ -74,6 +74,13 @@ public class CharacterController : MonoBehaviour
             anim.SetTrigger("jump");
             anim.SetBool("grounded", false);
         }
+
+        if (DialogueManager.Instance.isDialogueActive)
+        {
+            moveDirection = 0.0f;
+            anim.SetFloat("speed", 0.0f);
+            return; 
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
