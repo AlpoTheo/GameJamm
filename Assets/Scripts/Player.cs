@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     Animator myAnimator;
     CapsuleCollider2D myCapsuleCollider;
 
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -23,6 +24,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (myAnimator.GetBool("isAttacking"))
+            {
+                myRigidbody.velocity = Vector2.zero;
+            }
+
         Run();
         Sprite();
     }
@@ -45,13 +51,32 @@ public class Player : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if(!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
+        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
 
         if (value.isPressed)
         {
             myRigidbody.velocity += new Vector2(0f, jumpPower);
         }
 
+    }
+
+    void OnFire(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            myAnimator.SetBool("isAttacking", true);
+
+            
+            // Animasyonun süresince bekleyip tekrar false yap
+            StartCoroutine(ResetAttack());
+        }
+    }
+
+    IEnumerator ResetAttack()
+    {
+        // Animasyonun süresini bekleyin (örneðin 0.5 saniye)
+        yield return new WaitForSeconds(0.6f); // Bu deðeri animasyonunuzun uzunluðuna göre ayarlayýn
+        myAnimator.SetBool("isAttacking", false);
     }
 
     void Sprite()
