@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         isDialogueActive = true;
-        animator.SetTrigger("show");
+        animator.SetTrigger("Show");
         lines.Clear();
 
         foreach (DialogueLine dialogueLine in dialogue.lines)
@@ -66,6 +66,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         isDialogueActive = false;
-        animator.SetTrigger("hide");
+        animator.SetBool("Hide", true);
     }
 }
