@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ public class CharacterController : MonoBehaviour
 {
     public float jumpForce = 2.0f;
     // run-idle gecisi icin
-    public float speed = 5.0f;
+    public float speed = 8.0f;
     private float moveDirection;
 
     private bool jump;
@@ -72,6 +73,22 @@ public class CharacterController : MonoBehaviour
             grounded = false;
             anim.SetTrigger("jump");
             anim.SetBool("grounded", false);
+        }
+
+        if (DialogueManager.Instance.isDialogueActive)
+        {
+            moveDirection = 0.0f;
+            anim.SetFloat("speed", 0.0f);
+            return; 
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Zemin"))
+        {
+            anim.SetBool("grounded", true);
+            grounded = true;
         }
     }
 }
