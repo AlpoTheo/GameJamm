@@ -617,7 +617,7 @@ Transform:
   m_GameObject: {fileID: 30605373}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.31, y: 1.82, z: 0}
+  m_LocalPosition: {x: -73.48, y: 1.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -683,7 +683,8 @@ MonoBehaviour:
     - character:
         name: Woodcutter
         icon: {fileID: 21300000, guid: 1388fa8c72dfc7845921716f89843a21, type: 3}
-      line: Merhaba ufaklik buralarda yeni olmalisin.
+      line: Orman... Ormanin derinliklerinde yasayan o sey... Benim pesimi hala daha
+        kabuslarimda bile birakmiyor
     - character:
         name: Jack
         icon: {fileID: 21300000, guid: 355ae8605d578a147b656c81cc1e1ee0, type: 3}
@@ -701,8 +702,8 @@ MonoBehaviour:
     - character:
         name: Woodcutter
         icon: {fileID: 21300000, guid: 1388fa8c72dfc7845921716f89843a21, type: 3}
-      line: ... Anlatmak bile cok zor geliyor. Orman... Ormanin derinliklerinde yasayan
-        o sey... Benim pesimi hala daha kabuslarimda bile birakmiyor.
+      line: Orman... Ormanin derinliklerinde yasayan o sey... Benim pesimi hala daha
+        kabuslarimda bile birakmiyor.
 --- !u!1001 &37121570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -861,7 +862,6 @@ Transform:
   - {fileID: 1410507297}
   - {fileID: 1766959065}
   - {fileID: 592117028}
-  - {fileID: 1520078294}
   - {fileID: 700505885}
   - {fileID: 1132052523}
   - {fileID: 263638810}
@@ -6686,7 +6686,7 @@ Transform:
   m_GameObject: {fileID: 173134103}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.31, y: 4.29, z: -10}
+  m_LocalPosition: {x: -73.48, y: 4.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23716,11 +23716,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3564026850829729314, guid: 459b65f26ee3d2d4c830fbffaa476ebc, type: 3}
   m_PrefabInstance: {fileID: 1520018873}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1520078294 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-  m_PrefabInstance: {fileID: 2018365449269498325}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1526552262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5539573807616245569, guid: 25f9f2235afcaca429284c9aec8982df, type: 3}
@@ -30125,7 +30120,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31146,64 +31141,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6770ea3eabbc694a9bad4112d5af65b, type: 3}
---- !u!1001 &2018365449269498325
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 52492776}
-    m_Modifications:
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -68.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018365450437254147, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1515793881361588757, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
 --- !u!1001 &2160033962814688701
 PrefabInstance:
   m_ObjectHideFlags: 0

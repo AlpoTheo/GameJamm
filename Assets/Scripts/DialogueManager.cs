@@ -41,7 +41,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (lines.Count == 0)
         {
-            EndDialogue();
+            //EndDialogue();
             return;
         }
         DialogueLine curentLine = lines.Dequeue();
@@ -63,9 +63,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
-    {
-        isDialogueActive = false;
-        animator.SetBool("Hide", true);
-    }
+    //void EndDialogue()
+   // {
+       // isDialogueActive = false;
+       // animator.SetBool("Hide", true);
+    //}
 }
